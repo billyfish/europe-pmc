@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>PMC search</title></head>
+<body>
+  <h1>PMC search</h1>
+  <form action="search" method="get">
+    <p><label>Institution <input name="institution" required></label></p>
+    <p><label>Number of grants (1–10) <input name="limit" type="number" min="1" max="10" value="5"></label></p>
+    <p><label>Publications per grant (0–5) <input name="publicationsPerGrant" type="number" min="0" max="5" value="3"></label></p>
+    <p><label>Page of grants (1 or more) <input name="page" type="number" min="1" value="1"></label></p>
+    <p><button type="submit">Search</button></p>
+  </form>
+</body>
+</html>
