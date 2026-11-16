@@ -12,6 +12,7 @@ The image builds and deploys the `pmc` Java webapp (Maven, Jakarta Servlet 6.1) 
 | `institution`          | yes      | –       | non-blank, one value only  |
 | `limit`                | no       | 5       | number of grants, 1–10     |
 | `publicationsPerGrant` | no       | 3       | publications per grant, 1–5 |
+| `page` | no       | 1      | the page number of results to get |
 
 A blank `limit` or `publicationsPerGrant` (_e.g._ `limit=`) uses the default and unknown parameters are ignored.
 
@@ -84,13 +85,6 @@ Once the Docker image is running, you can access the servlet  directly or via th
 You can also call the REST API directly and it is of the form
 
 `http://localhost:8080/search`
-
-With the following GET parameters
-
- * **institution**:  The name of the institution to search for
- * **limit**: The maximum number of grants to return
- * **publicationsPerGrant**:  The maximum number of publications per grant to return
- * **page**: The page number of results to return
 
 For instance, `http://localhost:8080/search?institution=Cambridge&limit=5&publicationsPerGrant=3` will search for all grants mentioning Cambridge as part of the affiliated institution and return a maximum of 5 grants, each with a a maximum of 3 publications.
 
